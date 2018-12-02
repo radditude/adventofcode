@@ -14,7 +14,7 @@ defmodule AdventOfCode2018.DayTwo do
     )
 	}
 
-	@use_test_input false
+	@use_test_input true
 
   def input_string do
     if @use_test_input, do: @inputs.test, else: @inputs.real
@@ -68,7 +68,7 @@ defmodule AdventOfCode2018.DayTwo do
 
     diff
     |> Enum.map(fn {key, value} ->
-      if key == :del || key == :ins, do: nil, else: value
+      if key == :eq, do: value, else: nil
     end)
     |> Enum.join()
 	end

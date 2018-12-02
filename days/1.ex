@@ -4,7 +4,7 @@ defmodule AdventOfCode2018.DayOne do
     test: ~S(+3 +3 +4 -2 -4)
 	}
 
-	@use_test_input false
+	@use_test_input true
 
   def input_string do
     if @use_test_input, do: @inputs.test, else: @inputs.real
